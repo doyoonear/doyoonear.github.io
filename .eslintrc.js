@@ -1,12 +1,32 @@
 module.exports = {
   root: true,
   env: {
-    node: true
+    es6: true,
+    node: true,
   },
   extends: [
     'eslint:recommended',
     'prettier',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
+    "plugin:jest/recommended",
+  ],
+  overrides: [
+    {
+      files: [
+        "**/*.test.js"
+      ],
+      env: {
+        jest: true,
+      }
+      plugins: ["jest"],
+      rules: {
+        "jest/no-disabled-tests": "warn",
+        "jest/no-focused-tests": "error",
+        "jest/no-identical-title": "error",
+        "jest/prefer-to-have-length": "warn",
+        "jest/valid-expect": "error"
+      }
+    }
   ],
   parserOptions: {
     parser: 'babel-eslint',

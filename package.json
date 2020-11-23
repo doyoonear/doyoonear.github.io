@@ -1,16 +1,20 @@
 {
   "name": "typing-game",
   "version": "1.0.0",
-  "description": "",
+  "description": "assignment doyoonlee typing game",
   "main": "index.js",
+  "homepage": "https://doyoonear.github.io/",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "export NODE_ENV=test && jest --config ./jest.config.json",
     "clean": "rimraf dist",
     "dev": "export NODE_ENV=development && ./node_modules/.bin/webpack-dev-server --open --config config/webpack.config.dev.js",
     "build": "npm run clean && export NODE_ENV=production && ./node_modules/.bin/webpack --config config/webpack.config.prod.js"
   },
   "keywords": [],
-  "author": "",
+  "bugs": {
+    "email": "doyoonleee@gmail.com"
+  },
+  "author": "doyoonlee",
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.12.3",
@@ -20,14 +24,19 @@
     "css-loader": "^5.0.1",
     "eslint": "^7.13.0",
     "html-webpack-plugin": "^4.5.0",
+    "identity-obj-proxy": "^3.0.0",
     "mini-css-extract-plugin": "^1.3.1",
-    "node-fetch": "^2.6.1",
+    "package.json": "^2.0.1",
     "prettier": "^2.1.2",
     "regenerator-runtime": "^0.13.7",
     "rimraf": "^3.0.2",
     "style-loader": "^2.0.0"
   },
   "devDependencies": {
+    "babel-jest": "21.2.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "eslint-plugin-jest": "22.3.0",
+    "jest": "24.0.0",
     "webpack": "4.44.1",
     "webpack-cli": "3.3.12",
     "webpack-dev-server": "3.11.0",

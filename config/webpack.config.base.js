@@ -11,7 +11,7 @@ module.exports = {
     app: './src/index.js' 
   },
   output: {
-    path: path.resolve(__dirname, '/dist/'),
+    path: path.resolve(__dirname, '../dist'),
     publicPath: '/',
     filename: !isProdMode ? 'js/[name].js' : 'js/[name].[contenthash:8].js',
     chunkFilename: !isProdMode ? 'js/[name].js' : 'js/[name].[contenthash:8].js',

@@ -6,24 +6,41 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="wholeContainer">
+    <!-- 게임진행 화면-->
+    <section class="mainScreen">
       <div class="countContainer">
-        <div class="count">
+        <div>
           <span>남은시간</span>
-          <span class="time">10</span>
+          <span class="count time">10</span>
           <span>초</span>
         </div>
-        <div class="count">
+        <div>
           <span>점수</span>
-          <span>10</span>
+          <span class="count score">10</span>
           <span>점</span>
         </div>
       </div>
       <div class="wordContainer">
         <p class="word">문제 단어</p>
       </div>
-      <input id="write" placeholder="입력" />
-      <button class="start">시작</button>
-    </div>
+      <input class="write" type="text" placeholder="시작 버튼을 눌러주세요." />
+      <button class="mainBtn start">시작</button>
+      <button class="finBtn">임시완료</button>
+    </section>
+    <!-- 완료 화면 -->
+    <section class="hidden finishedScreen">
+      <div class="wordContainer">
+        <p class="word">Mission Complete!</p>
+        <p class="final">당신의 점수는 
+          <span class="count finalScore">10</span>
+          점입니다.
+        </p>
+        <p>단어당 평균 답변시간은 
+          <span class="count finalTime">4</span>
+          초입니다.
+        </p>
+      </div>
+      <button class="mainBtn restart">다시 시작</button>
+    </section>
   </body>
 </html>
